@@ -20,6 +20,13 @@ export const metadata = {
   description: "Bold looks. Clean fits. Built to stand out anywhere.",
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
