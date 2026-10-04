@@ -152,7 +152,7 @@ export default function Hero() {
         </div>
 
         <div className="grid flex-1 grid-cols-12 items-center gap-4 md:gap-8 px-4 sm:px-6 md:px-14">
-            <div className="col-span-12 flex flex-col gap-5 md:gap-7 lg:col-span-7 mt-8 md:mt-0 z-20 p-6 md:p-0 rounded-[2rem] md:rounded-none bg-white/30 md:bg-transparent backdrop-blur-md md:backdrop-blur-none border border-white/40 md:border-none shadow-neu md:shadow-none">
+            <div className="col-span-12 flex flex-col gap-5 md:gap-7 lg:col-span-7 mt-8 md:mt-0 z-20 p-6 md:p-0 rounded-[2rem] md:rounded-none bg-white/85 md:bg-transparent border border-white/40 md:border-none shadow-neu md:shadow-none">
               <div
                 ref={badgeRef}
                 className="inline-flex w-fit items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-semibold tracking-wider text-ink shadow-sm"
@@ -257,7 +257,7 @@ export default function Hero() {
           </div>
 
           <div ref={statsRef} className="px-4 pb-6 md:px-14 md:pb-8">
-            <div className="flex flex-col md:flex-row w-full md:w-fit divide-y md:divide-y-0 md:divide-x divide-black/10 rounded-3xl bg-white/85 shadow-neu-lg backdrop-blur-sm">
+            <div className="flex flex-col md:flex-row w-full md:w-fit divide-y md:divide-y-0 md:divide-x divide-black/10 rounded-3xl bg-white/95 md:bg-white/85 shadow-neu-lg md:backdrop-blur-sm">
               {stats.map(({ icon: Icon, value, label }) => (
                 <div key={label} className="flex items-center gap-3 px-6 py-4">
                   <Icon size={18} className="text-ink/70" strokeWidth={1.75} />

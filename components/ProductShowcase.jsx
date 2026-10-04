@@ -189,18 +189,21 @@ export default function ProductShowcase() {
     return () => clearInterval(timer);
   }, [order]);
 
-  // Parallax effect on scroll
+  // Parallax effect on scroll (Desktop only for performance)
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.to(".parallax-wrapper", {
-        y: "8%",
-        ease: "none",
-        scrollTrigger: {
-          trigger: ".showcase-section",
-          start: "top bottom",
-          end: "bottom top",
-          scrub: true,
-        },
+      let mm = gsap.matchMedia();
+      mm.add("(min-width: 768px)", () => {
+        gsap.to(".parallax-wrapper", {
+          y: "8%",
+          ease: "none",
+          scrollTrigger: {
+            trigger: ".showcase-section",
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true,
+          },
+        });
       });
     });
     return () => ctx.revert();
@@ -222,7 +225,7 @@ export default function ProductShowcase() {
       )}
 
       {/* White overlay to keep text legible over the video */}
-      <div className="absolute inset-0 bg-white/75 backdrop-blur-[1px]" />
+      <div className="absolute inset-0 bg-white/85 md:bg-white/75 md:backdrop-blur-[1px]" />
 
       <div className="relative z-10 grid flex-1 min-h-screen lg:h-full lg:min-h-0 grid-cols-1 lg:grid-cols-[62%_38%]">
         <div className="relative flex min-h-[55vh] lg:min-h-0 flex-col bg-transparent">
