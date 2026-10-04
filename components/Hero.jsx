@@ -115,16 +115,20 @@ export default function Hero() {
           "-=0.3"
         );
 
-      gsap.to(contentRef.current, {
-        yPercent: -6,
-        opacity: 0.4,
-        ease: "none",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top top",
-          end: "bottom top",
-          scrub: true,
-        },
+      let mm = gsap.matchMedia();
+
+      mm.add("(min-width: 768px)", () => {
+        gsap.to(contentRef.current, {
+          yPercent: -6,
+          opacity: 0.4,
+          ease: "none",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top top",
+            end: "bottom top",
+            scrub: true,
+          },
+        });
       });
     }, sectionRef);
 
