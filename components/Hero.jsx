@@ -141,10 +141,9 @@ export default function Hero() {
       id="home"
       className="relative h-screen w-full overflow-hidden bg-white"
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-white/80 md:from-transparent to-transparent z-10 pointer-events-none" />
       <VideoCutout
         src="/videos/hero.mp4"
-        className="absolute inset-0 h-full w-full object-[70%_center] md:translate-x-[10%] md:object-cover"
+        className="absolute inset-0 h-full w-full object-[85%_center] md:translate-x-[10%] md:object-cover"
       />
 
       <div ref={contentRef} className="relative z-10 flex h-full flex-col">
@@ -153,28 +152,28 @@ export default function Hero() {
         </div>
 
         <div className="grid flex-1 grid-cols-12 items-center gap-4 md:gap-8 px-4 sm:px-6 md:px-14">
-            <div className="col-span-12 flex flex-col gap-5 md:gap-7 lg:col-span-7 mt-12 md:mt-0">
+            <div className="col-span-12 flex flex-col gap-5 md:gap-7 lg:col-span-7 mt-8 md:mt-0 z-20 p-6 md:p-0 rounded-[2rem] md:rounded-none bg-white/50 md:bg-transparent backdrop-blur-md md:backdrop-blur-none border border-white/60 md:border-none shadow-neu md:shadow-none">
               <div
                 ref={badgeRef}
-                className="inline-flex w-fit items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-semibold tracking-wider text-ink shadow-neu"
+                className="inline-flex w-fit items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-semibold tracking-wider text-ink shadow-sm"
               >
                 NEW DROP <span aria-hidden="true">✦</span>
               </div>
 
-              <h1 className="flex flex-col text-[clamp(3rem,8.5vw,7.25rem)] font-bold leading-[0.92] tracking-tighter text-ink">
+              <h1 className="flex flex-col text-[clamp(2.75rem,8vw,7.25rem)] font-bold leading-[0.92] tracking-tighter text-ink drop-shadow-sm md:drop-shadow-none">
                 <span className="overflow-hidden">
                   <span ref={line1Ref} className="block">
                     Streetwear.
                   </span>
                 </span>
                 <span className="overflow-hidden">
-                  <span ref={line2Ref} className="block text-ink/50">
+                  <span ref={line2Ref} className="block text-ink/60 md:text-ink/50">
                     Redefined.
                   </span>
                 </span>
               </h1>
 
-              <p ref={subtextRef} className="max-w-sm text-base text-ink/60 md:text-lg">
+              <p ref={subtextRef} className="max-w-sm text-sm sm:text-base text-ink/70 md:text-ink/60 md:text-lg font-medium md:font-normal">
                 Bold looks. Clean fits. Built to stand out anywhere.
               </p>
 
