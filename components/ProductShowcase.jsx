@@ -207,9 +207,9 @@ export default function ProductShowcase() {
   }, []);
 
   return (
-    <section id="shop" className="showcase-section relative h-screen w-full bg-white">
-      <div className="grid h-full min-h-0 grid-cols-1 lg:grid-cols-[62%_38%]">
-        <div className="relative flex min-h-0 flex-col bg-white">
+    <section id="shop" className="showcase-section relative min-h-screen lg:h-screen w-full bg-white flex flex-col lg:block">
+      <div className="grid flex-1 min-h-screen lg:h-full lg:min-h-0 grid-cols-1 lg:grid-cols-[62%_38%]">
+        <div className="relative flex min-h-[55vh] lg:min-h-0 flex-col bg-white">
           <Navbar variant="shop" />
 
           <div className="relative flex min-h-0 flex-1 items-end justify-center overflow-hidden px-6 py-6 main-img-container">
@@ -222,7 +222,7 @@ export default function ProductShowcase() {
             </button>
 
             {/* Q2 Thumbnail */}
-            <div className="pointer-events-none absolute bottom-6 left-6 z-10 h-[42%] w-[120px]">
+            <div className="pointer-events-none absolute bottom-6 left-4 lg:left-6 z-10 h-[120px] w-[90px] lg:h-[42%] lg:w-[120px]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={q2Product.image}
@@ -236,7 +236,7 @@ export default function ProductShowcase() {
             </div>
 
             {/* Q1 Thumbnail */}
-            <div className="pointer-events-none absolute bottom-6 left-[94px] z-20 h-[58%] w-[160px]">
+            <div className="pointer-events-none absolute bottom-6 left-[70px] lg:left-[94px] z-20 h-[160px] w-[120px] lg:h-[58%] lg:w-[160px]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={q1Product.image}
