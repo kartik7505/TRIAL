@@ -32,7 +32,7 @@ function LogoMark() {
 export default function Navbar({ variant = "hero", cartCount = 2 }) {
   if (variant === "shop") {
     return (
-      <nav className="flex items-center justify-between px-8 py-6 md:px-10">
+      <nav className="flex items-center justify-between px-4 sm:px-6 py-4 md:py-6 md:px-10">
         <span className="font-serif text-2xl font-semibold tracking-tight text-ink lowercase">
           drift.
         </span>
@@ -74,7 +74,7 @@ export default function Navbar({ variant = "hero", cartCount = 2 }) {
   }
 
   return (
-    <nav className="flex items-center justify-between px-8 py-6 md:px-10">
+    <nav className="flex items-center justify-between px-4 sm:px-6 py-4 md:py-6 md:px-10">
       <div className="flex items-center gap-2 text-ink">
         <LogoMark />
         <span className="text-sm font-semibold tracking-[0.25em]">DRIFT</span>

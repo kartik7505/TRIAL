@@ -137,9 +137,10 @@ export default function Hero() {
       id="home"
       className="relative h-screen w-full overflow-hidden bg-white"
     >
+      <div className="absolute inset-0 bg-gradient-to-r from-white/80 md:from-transparent to-transparent z-10 pointer-events-none" />
       <VideoCutout
         src="/videos/hero.mp4"
-        className="absolute inset-0 h-full w-full translate-x-[10%] object-cover"
+        className="absolute inset-0 h-full w-full object-[70%_center] md:translate-x-[10%] md:object-cover"
       />
 
       <div ref={contentRef} className="relative z-10 flex h-full flex-col">
@@ -147,8 +148,8 @@ export default function Hero() {
           <Navbar variant="hero" />
         </div>
 
-        <div className="grid flex-1 grid-cols-12 items-center gap-8 px-8 md:px-14">
-            <div className="col-span-12 flex flex-col gap-7 lg:col-span-7">
+        <div className="grid flex-1 grid-cols-12 items-center gap-4 md:gap-8 px-4 sm:px-6 md:px-14">
+            <div className="col-span-12 flex flex-col gap-5 md:gap-7 lg:col-span-7 mt-12 md:mt-0">
               <div
                 ref={badgeRef}
                 className="inline-flex w-fit items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-semibold tracking-wider text-ink shadow-neu"
@@ -252,8 +253,8 @@ export default function Hero() {
             </div>
           </div>
 
-          <div ref={statsRef} className="px-8 pb-8 md:px-14">
-            <div className="flex w-fit divide-x divide-black/10 rounded-3xl bg-white/85 shadow-neu-lg backdrop-blur-sm">
+          <div ref={statsRef} className="px-4 pb-6 md:px-14 md:pb-8">
+            <div className="flex flex-col md:flex-row w-full md:w-fit divide-y md:divide-y-0 md:divide-x divide-black/10 rounded-3xl bg-white/85 shadow-neu-lg backdrop-blur-sm">
               {stats.map(({ icon: Icon, value, label }) => (
                 <div key={label} className="flex items-center gap-3 px-6 py-4">
                   <Icon size={18} className="text-ink/70" strokeWidth={1.75} />
