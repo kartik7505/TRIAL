@@ -207,9 +207,25 @@ export default function ProductShowcase() {
   }, []);
 
   return (
-    <section id="shop" className="showcase-section relative min-h-screen lg:h-screen w-full bg-white flex flex-col lg:block">
-      <div className="grid flex-1 min-h-screen lg:h-full lg:min-h-0 grid-cols-1 lg:grid-cols-[62%_38%]">
-        <div className="relative flex min-h-[55vh] lg:min-h-0 flex-col bg-white">
+    <section id="shop" className="showcase-section relative min-h-screen lg:h-screen w-full bg-white flex flex-col lg:block overflow-hidden">
+      {/* Video as full bg — multiply blend strips the light studio background */}
+      {mounted && (
+        <video
+          src="/videos/product.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="pointer-events-none absolute inset-0 h-full w-full object-cover object-right md:object-center"
+          style={{ mixBlendMode: "multiply" }}
+        />
+      )}
+
+      {/* White overlay to keep text legible over the video */}
+      <div className="absolute inset-0 bg-white/75 backdrop-blur-[1px]" />
+
+      <div className="relative z-10 grid flex-1 min-h-screen lg:h-full lg:min-h-0 grid-cols-1 lg:grid-cols-[62%_38%]">
+        <div className="relative flex min-h-[55vh] lg:min-h-0 flex-col bg-transparent">
           <Navbar variant="shop" />
 
           <div className="relative flex min-h-0 flex-1 items-end justify-center overflow-hidden px-6 py-6 main-img-container">
@@ -276,22 +292,7 @@ export default function ProductShowcase() {
           </div>
         </div>
 
-        <div className="relative flex flex-col justify-center overflow-hidden bg-white px-8 py-10 md:px-14">
-          {/* Video as full bg — multiply blend strips the light studio background */}
-          {mounted && (
-            <video
-              src="/videos/product.mp4"
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="pointer-events-none absolute inset-0 h-full w-full object-cover"
-              style={{ mixBlendMode: "multiply" }}
-            />
-          )}
-
-          {/* White overlay to keep text legible over the video */}
-          <div className="absolute inset-0 bg-white/75 backdrop-blur-[1px]" />
+        <div className="relative flex flex-col justify-center bg-transparent px-8 py-10 md:px-14">
 
           {/* All text/controls sit above the video */}
           <div className="relative z-10">
