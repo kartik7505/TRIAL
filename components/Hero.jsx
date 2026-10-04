@@ -143,7 +143,7 @@ export default function Hero() {
     >
       <VideoCutout
         src="/videos/hero.mp4"
-        className="absolute inset-0 h-full w-full object-[85%_center] md:translate-x-[10%] md:object-cover"
+        className="absolute inset-0 h-full w-full object-cover object-[75%_center] md:object-center md:translate-x-[10%]"
       />
 
       <div ref={contentRef} className="relative z-10 flex h-full flex-col">
@@ -152,7 +152,7 @@ export default function Hero() {
         </div>
 
         <div className="grid flex-1 grid-cols-12 items-center gap-4 md:gap-8 px-4 sm:px-6 md:px-14">
-            <div className="col-span-12 flex flex-col gap-5 md:gap-7 lg:col-span-7 mt-8 md:mt-0 z-20 p-6 md:p-0 rounded-[2rem] md:rounded-none bg-white/50 md:bg-transparent backdrop-blur-md md:backdrop-blur-none border border-white/60 md:border-none shadow-neu md:shadow-none">
+            <div className="col-span-12 flex flex-col gap-5 md:gap-7 lg:col-span-7 mt-8 md:mt-0 z-20 p-6 md:p-0 rounded-[2rem] md:rounded-none bg-white/30 md:bg-transparent backdrop-blur-md md:backdrop-blur-none border border-white/40 md:border-none shadow-neu md:shadow-none">
               <div
                 ref={badgeRef}
                 className="inline-flex w-fit items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-semibold tracking-wider text-ink shadow-sm"
