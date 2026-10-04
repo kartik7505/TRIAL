@@ -312,12 +312,12 @@ export default function ProductShowcase() {
               </h2>
 
               <p className="mt-4 text-2xl font-semibold text-ink">
-                ${activeProduct.price.toFixed(2)}
+                ₹{activeProduct.price.toLocaleString("en-IN")}
               </p>
 
               <div className="mt-8">
                 <p className="text-xs font-semibold tracking-wide text-ink/50">
-                  SELECT SIZE (US)
+                  SELECT SIZE (IND)
                 </p>
                 <div className="mt-3 flex flex-wrap gap-2">
                   {activeProduct.sizes.map((size) => (
@@ -370,7 +370,7 @@ export default function ProductShowcase() {
             >
               <span>ADD TO CART</span>
               <span className="flex items-center gap-3">
-                ${activeProduct.price.toFixed(2)}
+                ₹{activeProduct.price.toLocaleString("en-IN")}
                 <ShoppingBag size={18} strokeWidth={1.75} />
               </span>
             </button>
